@@ -1,21 +1,27 @@
 import React, { useState } from 'react';
+import DisplayEntries from './Components/DisplayEntries/DisplayEntries';
 
 
 function App() {
 
-  const [entries, setEntries] = useState([{name: "David Lagrange", post: "text"}, {name: "JJ Vega", post: "text"}, {name: "Nevin Seibel", post: "text"}])
+  const [entries, setEntries] = useState([{name: "David Lagrange", post: "text"}])
 
-  function addNewEntry(entry){
+  // function addNewEntry(entry){
 
-    let tempEntries = [entry, ...entries];
+  //   let tempEntries = [entry, ...entries];
 
-    setEntries(tempEntries);
-  }
+  //   setEntries(tempEntries);
+  // }
 
   return (
     <div>
-      <AddEntryForm addNewEntryProperty = {addNewEntry}/>
-      <DisplayEntries parentEntries = {entries}/>
+      <header>
+        <h1>SocialFeed</h1>
+      </header>
+      <body>
+        <DisplayEntries parentEntries = {entries}/>
+        {/* <AddEntryForm addNewEntryProperty = {addNewEntry}/> */}
+      </body>
     </div>
   );
 }
