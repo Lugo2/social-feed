@@ -7,12 +7,12 @@ const DisplayEntries = (props) => {
                 return (
                 <tr>
                     <th>
-                        {entry.name}
+                        {entry.Name}
                     </th>
                     <div>
                         <tbody>
                             <tr>
-                                <td>{entry.post}</td>
+                                <td>{entry.Post}</td>
                             </tr>
                         </tbody>
                     </div>
